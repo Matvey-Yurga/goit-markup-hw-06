@@ -27,6 +27,13 @@
           <a href="./index.html" class="logo"
             >Web<span class="logo-header">Studio</span></a
           >
+
+          <button class="mobail-menu-btn" type="button">
+            <svg class="" width="24px" height="24px">
+              <use href="./images/icons.svg#icon-heroicons-solid_menu"></use>
+            </svg>
+          </button>
+
           <ul class="nav-list">
             <li class="nav-item-title">
               <a href="./index.html" class="nav-item current">Studio</a>
@@ -57,7 +64,7 @@
     </header>
     <main>
       <!-- section 1 -->
-      <section id="Studio" class="hero">
+      <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button type="button" class="hero-button">Order Service</button>
@@ -130,7 +137,7 @@
                 src="./images/img.jpg"
                 alt="photo"
                 width="264"
-                height="260"
+                height="264"
               />
               <div class="team-name">
                 <h3 class="team-caption">Mark Guerrero</h3>
@@ -298,7 +305,7 @@
         </div>
       </section>
       <!--section 4-->
-      <section class="portfolio">
+      <section class="portfolio hide">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="portfolio-ul">
@@ -420,7 +427,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer hide">
       <div class="container footer-container">
         <div class="footer-logo-container">
           <a href="./index.html" class="logo-footer">
@@ -486,7 +493,7 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-open">
+    <div class="backdrop is-ope">
       <div class="modal">
         <button type="button" class="modal-btn">
           <svg id="icon-close" width="8" height="8" class="modal-svg-btn">
@@ -575,6 +582,63 @@
           </div>
           <button class="hero-button btn" type="submit">Send</button>
         </form>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div class="mobile-menu is-ope">
+      <div class="container mobile-menu-container">
+        <button type="button" class="modal-btn mobile-btn">
+          <svg id="icon-close" width="8" height="8" class="modal-svg-btn">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <ul class="menu-list">
+          <li class="menu-title purnt">Studio</li>
+          <li class="menu-title">Portfolio</li>
+          <li class="menu-title">Contacts</li>
+        </ul>
+        <ul class="contacts-list-menu">
+          <li class="contacts-item-title-menu">
+            <a href="mailto:info@devstudio.com" class="address-item"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="contacts-item-title-menu">
+            <a href="tel:+110001111111" class="address-item"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+        </ul>
+        <ul class="social-list-menu">
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </body>
