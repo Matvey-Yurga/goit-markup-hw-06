@@ -391,10 +391,6 @@ button{
     background: #f4f4fd;
     padding: 90px 0 102px 0;
 }
-.team-conteiner{
-    max-width: 264px;
-}
-
 .team-title{
     font-weight: 700;
         font-size: 36px;
@@ -406,15 +402,26 @@ button{
         margin-bottom: 72px;
 }
 .team-ul{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 72px;
 }
-@media only screen and (min-width: 768px) {
-  .team-ul {
+@media (min-width: 768px) {
+    .team-ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 64px 24px;
+        margin: 0 92px;
+    }
+}
+@media screen and (min-width: 1158px) {
+    .team-ul {
+        flex-direction: row;
+        flex-wrap: nowrap;
         gap: 24px;
-            justify-content: center;
-  }
+        margin: 0;
+    }
 }
 .team-item{
     background-color: #FFFFFF;
@@ -422,9 +429,9 @@ button{
             border-radius: 0 0 4px 4px;
             box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
-@media only screen and (min-width: minwidthpx) {
+@media only screen and (min-width: 768px) {
   .team-item {
-    width: calc((100% - 24 x) / 2);
+    width: calc((100% - 24px) / 2);
   }
 }
 .team-caption{
@@ -473,9 +480,18 @@ fill: #f4f4fd;
 }
 /* portfolio */
 .portfolio{
-padding: 120px 0 120px 0;
+padding: 90px 0 96px 0;
 }
-
+@media only screen and (min-width: 768px) {
+  .portfolio {
+    padding: 96px 0 96px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+    .portfolio {
+        padding: 120px 0;
+    }
+}
 .portfolio-title{
     margin-bottom: 72px;
     font-weight: 700;
@@ -488,13 +504,34 @@ padding: 120px 0 120px 0;
 }
 .portfolio-ul{
     display: flex;
-    flex-wrap: wrap;
-    gap: 48px 24px;
+        flex-direction: column;
+        gap: 48px;
 }
+@media only screen and (min-width: 768px) {
+  .portfolio-ul {
+                flex-wrap: wrap;
+                flex-direction: row;
+                gap: 72px 24px;
+            }
+  }
+  @media only screen and (min-width: 1158px) {
+      .portfolio-ul {
+        gap: 48px 24px;
+      }
+  }
 
 .portfolio-li{
-    width: calc((100% - 48px) / 3);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media only screen and (min-width: 768px) {
+  .portfolio-li {
+            width: calc((100% - 24px) / 2);
+  }
+}
+@media only screen and (min-width: 1158px) {
+    .portfolio-li {
+    width: calc((100% - 48px) / 3);
+    }
 }
 
 .box {
@@ -503,20 +540,25 @@ padding: 120px 0 120px 0;
 }
 
 .overley {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    width: 100%;
-    height: 100%;
-    padding: 40px 32px;
-    color: #f4f4fd;
-    background-color: #4d5ae5;
-    transform: translatey(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+display: none;
+}
+@media only screen and (min-width: 1158px) {
+  .overley {
+        position: absolute;
+            top: 0;
+            left: 0;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            width: 100%;
+            height: 100%;
+            padding: 40px 32px;
+            color: #f4f4fd;
+            background-color: #4d5ae5;
+            transform: translatey(100%);
+            transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 .portfolio-name{
     padding: 32px 16px;
@@ -549,20 +591,48 @@ padding: 120px 0 120px 0;
 /* footer */
 .footer {
     background: #2e2f42;
-    padding: 100px 0;
+    padding: 96px 0;
 }
 
 .footer-container {
     display: flex;
-    align-items: baseline;
+        flex-direction: column;
+        justify-content: center;
+        gap: 72px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 0;
+                justify-content: flex-start;
+                padding-left: 108px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .footer-container {
+        padding-left: 15px;
+  }
 }
 .footer-logo-container{
-    margin-right: 120px
+    min-width: 264px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-logo-container {
+    max-width: 264px;
+        margin-bottom: 72px;
+        margin-right: 24px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .footer-logo-container {
+    margin-right: 120px;
+  }
 }
 
 
 .logo-footer {
-    display: inline-block;
+    display: block;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -571,6 +641,12 @@ padding: 120px 0 120px 0;
     text-transform: uppercase;
     color: #4d5ae5;
     margin-bottom: 16px;
+    text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .logo-footer {
+    display: inline-block;
+  }
 }
 .logo-footer-highlight {
     color: #f4f4fd;
@@ -584,24 +660,30 @@ padding: 120px 0 120px 0;
     letter-spacing: 0.02em;
     color: #f4f4fd;
 }
-
-.social-section {
-    display: flex;
-    flex-direction: column;
+@media only screen and (min-width: 1158px) {
+  .social-section {
+    margin-right: 40px;
+  }
 }
-
 .social-title {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #fff;
+        text-align: center;
     margin-bottom: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .social-title {
+    display: inline-block;
+  }
 }
 
 .social-list {
     display: flex;
-    gap: 16px;
+        flex-direction: row;
+        gap: 16px;
 }
 
 .social-item {
@@ -628,25 +710,20 @@ padding: 120px 0 120px 0;
 .social-icon {
     fill: #f4f4fd;
 }
-.email-section {
-    display: flex;
-    flex-direction: column;
-    margin-left: 80px;
-}
-.email-form{
-        display: flex;
-            align-items: center;
-            gap: 24px;
-}
 .email-title {
     font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #fff;
-        margin-bottom: 16px;
+    margin-bottom: 16px;
+        text-align: center;
 }
-
+@media only screen and (min-width: 768px) {
+  .email-title {
+text-align: start;
+  }
+}
 .email-label {
     font-weight: 400;
         font-size: 12px;
@@ -654,7 +731,12 @@ padding: 120px 0 120px 0;
         letter-spacing: 0.04em;
         color: #fff;
 }
-
+@media only screen and (min-width: 768px) {
+  .email-form {
+            display: flex;
+                flex-direction: row;
+  }
+}
 .email-input {
     background-color: transparent;
     border: 1px solid #ffffff;
@@ -692,7 +774,16 @@ color: #ffffff;
             height: 40px;
             transition: background-color 250ms ease-in-out ;
             cursor: pointer;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 16px;
         }
+@media only screen and (min-width: 768px) {
+                  .email-button {
+    margin-top: 0;
+    margin-left: 24px;
+  }
+}
 .email-button:hover{
     background-color: #404bbf;
 }
@@ -721,21 +812,28 @@ color: #ffffff;
 }
 
 .modal{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    width: 408px;
-    min-height: 584px;
-    padding: 72px 24px 24px 24px;
-
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
-    background: #fcfcfc;
-    border-radius: 4px;
-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        border-radius: 4px;
+            width: 288px;
+            min-height: 623px;
+            background-color: #FCFCFC;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+            transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            padding-top: 72px;
+            padding-right: 16px;
+            padding-bottom: 24px;
+            padding-left: 16px;
 }
+@media only screen and (min-width: 768px) {
+  .modal {
+            min-width: 408px;
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+  }
 .backdrop:not(.is-open) .modal{
     transform: translate(-50%, -50%);
 }
