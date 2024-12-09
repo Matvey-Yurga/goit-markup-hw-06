@@ -42,7 +42,7 @@ padding: 0 16px;
 
 @media only screen and (min-width: 768px){
 .container{
-    max-width: 736px;
+    max-width: 768px;
 }
 }
 
@@ -101,7 +101,7 @@ button{
   }
 }
 .logo{
-        padding: 24px 0;
+    padding: 16px 0;
             display: block;
     font-family:"Raleway",
         sans-serif;
@@ -115,6 +115,7 @@ button{
 @media only screen and (min-width: 768px) {
   .logo {
             margin-right: 120px;
+                padding: 24px 0;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -163,39 +164,39 @@ button{
     margin-left: auto;
   }
 }
-.address-item{
-            display: block;
+@media only screen and (min-width: 768px) {
+  .address-item{
+              display: block;
     font-weight: 400;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #434455;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    font-style: normal;
+    color: #434455;
+          transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  } 
+    
+  }
 @media only screen and (min-width: 1158px) {
   .address-item {
-                margin-right: 40px;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    letter-spacing: 0.02em;
   }
 }
-.contacts-list{
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
+
 @media only screen and (min-width: 768px) {
  .contacts-list  {
-    display: flex;
-        flex-wrap: wrap;
+        display: flex;
             flex-direction: column;
-            gap: 0;
+            gap: 12px;
   }
 }
 @media only screen and (min-width: 1158px) {
     .contacts-list {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        gap: 40;
+            flex-direction: row;
+            align-items: center;
+            gap: 40px;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -214,7 +215,7 @@ button{
 }
 /* hero */
 .hero{
-    width: 100%;
+    max-width: 100%;
     background-color: #2E2F42;
         text-align: center;
         display: block;
@@ -222,31 +223,57 @@ button{
         background-image: linear-gradient(
     rgba(46, 47, 66, 0.7),
     rgba(46, 47, 66, 0.7)),
-         url(../images/people-office.jpg);
+         url(../images/Dark-bg_mob@1x.jpg);
+
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
 }
-@media only screen and (min-width: 768px) {
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    padding: 122px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url(../images/Dark-bg_mob@2x.jpg);
   }
 }
-@media only screen and (min-width: 1158px) {
+
+
+@media only screen and (min-width: 768px){
+  .hero {
+    padding: 122px 0;
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)),
+                    url(../images/Dark-bg_tab@1x.jpg);
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi),
+ (min-resolution: 2dppx) {
+  .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)),
+                    url(../images/Dark-bg_tab@2x.jpg);
+  }
+}
+
+@media only screen and (min-width: 1158px){
     .hero {
         padding: 188px 0;
+                    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                                rgba(46, 47, 66, 0.7)),
+                            url(../images/people-office\ 1_desk@1x.jpg);
     }
 }
-   
+@media only screen and (min-width: 1158px) and (min-resolution: 192dpi),
+ (min-resolution: 2dppx) {
+    .hero {
+        padding: 188px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/people-office_1_desk@2x.jpg);
+    }
+}
 .hero-title{
-    /* max-width: 496px;
-
-        font-size: 56px;
-        line-height: 1.07;
-        color: #fff;
-
-        margin-bottom: 48px; */
-
             font-weight: 700;
             font-size: 36px;
             line-height: 1.11111;
@@ -593,6 +620,11 @@ display: none;
     background: #2e2f42;
     padding: 96px 0;
 }
+@media only screen and (min-width: 1158px) {
+  .footer {
+    padding: 100px 0;
+  }
+}
 
 .footer-container {
     display: flex;
@@ -612,8 +644,12 @@ display: none;
 @media only screen and (min-width: 1158px) {
   .footer-container {
         padding-left: 15px;
+                padding-left: 15px;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    gap: 0;
+                }
   }
-}
 .footer-logo-container{
     min-width: 264px;
 }
@@ -626,7 +662,8 @@ display: none;
 }
 @media only screen and (min-width: 1158px) {
   .footer-logo-container {
-    margin-right: 120px;
+margin: 0;
+margin-right: 120px;
   }
 }
 
@@ -662,7 +699,7 @@ display: none;
 }
 @media only screen and (min-width: 1158px) {
   .social-section {
-    margin-right: 40px;
+margin-right: 80px;
   }
 }
 .social-title {
@@ -682,6 +719,7 @@ display: none;
 
 .social-list {
     display: flex;
+        justify-content: center;
         flex-direction: row;
         gap: 16px;
 }
@@ -706,7 +744,11 @@ display: none;
 .social-link:focus {
     background-color: #31d0aa;
 }
-
+@media only screen and (min-width: 1158px) {
+  .email-section {
+    margin: 0 auto;
+  }
+}
 .social-icon {
     fill: #f4f4fd;
 }
@@ -741,7 +783,7 @@ text-align: start;
     background-color: transparent;
     border: 1px solid #ffffff;
     border-radius: 4px;
-    width: 264px;
+    width: 288px;
     height: 40px;
     padding-left: 16px;
     font-size: 12px;
@@ -751,6 +793,11 @@ text-align: start;
     color: #ffffff;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     }
+@media only screen and (min-width: 1158px) {
+  .email-input {
+    width: 264px;
+  }
+}
 .email-input::placeholder{
 color: #ffffff;
 }
@@ -1083,4 +1130,18 @@ margin: 0 auto;
 }
 .purnt{
 color: #404bbf;
+}
+.address-item-tel{
+font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #4d5ae5;
+}
+.address-item-email{
+font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #434455;
 }
