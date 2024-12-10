@@ -219,16 +219,16 @@ button{
     background-color: #2E2F42;
         text-align: center;
         display: block;
-        padding: 72px 0;
         background-image: linear-gradient(
-    rgba(46, 47, 66, 0.7),
-    rgba(46, 47, 66, 0.7)),
-         url(../images/Dark-bg_mob@1x.jpg);
-
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-}
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+            url(../images/Dark-bg_mob@1x.jpg);
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 72px 0;
+        }
 @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
@@ -240,7 +240,7 @@ button{
 
 @media only screen and (min-width: 768px){
   .hero {
-    padding: 122px 0;
+    padding: 112px 0;
             background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                         rgba(46, 47, 66, 0.7)),
                     url(../images/Dark-bg_tab@1x.jpg);
@@ -267,7 +267,6 @@ button{
 @media only screen and (min-width: 1158px) and (min-resolution: 192dpi),
  (min-resolution: 2dppx) {
     .hero {
-        padding: 188px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
             url(../images/people-office_1_desk@2x.jpg);
